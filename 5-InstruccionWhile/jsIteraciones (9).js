@@ -3,17 +3,39 @@ function mostrar()
  usuario quiera, mostrar el número máximo y el número mínimo ingresado.*/
 
 {
+  var num;
+  var max;
+  var min;
+  var respuesta = true;
+  var primeravez=true;
+  while(respuesta){
+    do{
+      num=prompt("ingrese un numero");
+      num=parseInt(num);
+    }while(isNaN(num));
 
-	var contador=0;
-	// declarar variables
+    if(primeravez){
+    primeravez=false;
+    min=num;
+    max=num;
+    }else{
+      if(num>max){
+      max=num;
+      }else{
+        if(num<min){
+          min=num;
+        }
+      }
+    }
+    respuesta=confirm("¿desea continuar?");
 
-	var respuesta='si';
+  }
 
-	while(respuesta!='no')
-	{
+  document.getElementById("maximo").value=max;
+  document.getElementById("minimo").value=min;
 
 
-	}
+
 
 
 
