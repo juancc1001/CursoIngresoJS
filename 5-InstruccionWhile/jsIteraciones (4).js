@@ -20,5 +20,4 @@ function mostrar()
   }while((num<0 || num>10) || isNaN(num));
   document.getElementById("Numero").value=num
 
-
 }//FIN DE LA FUNCIÓN
